@@ -1,10 +1,12 @@
-using System.Security.Cryptography.X509Certificates;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public void GamePause()
+    {
+        Invoke("PlayGame", 0.3f);
+    }
 
     public void PlayGame()
     {
@@ -18,6 +20,11 @@ public class MainMenu : MonoBehaviour
     }
 
     public void LoadInstructions()
+    {
+        Invoke("LoadSceneInstructions", 0.3f); 
+    }
+
+    private void LoadSceneInstructions()
     {
         SceneManager.LoadScene("Instructions");
     }

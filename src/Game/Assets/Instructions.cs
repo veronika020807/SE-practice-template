@@ -5,7 +5,11 @@ public class SceneSwitcher : MonoBehaviour
 {
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("MainMenu"); 
+        Invoke("LoadMainMenuDelayed", 0.3f);
+    }
+
+    private void LoadMainMenuDelayed()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
-
