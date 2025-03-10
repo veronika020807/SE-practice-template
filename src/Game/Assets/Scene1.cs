@@ -32,11 +32,13 @@ public class DialogueManager : MonoBehaviour
 
         new DialogueLine { Speaker = "Alex", Content = "(Різко підводиться)\nХто ти? Що ти знаєш про нього?" },
 
-        new DialogueLine { Speaker = "Glitch", Content = "Він залишив тобі послання. Код, розділений на чотири частини..." },
+        new DialogueLine { Speaker = "Glitch", Content = "Він залишив тобі послання. Код, розділений на чотири частини.\n" + 
+            "Перша - у архіві університету, де він колись працював."},
 
         new DialogueLine { Speaker = "Alex", Content = "(Стискає кулаки)\nЧому я повинен тобі вірити?" },
 
-        new DialogueLine { Speaker = "Glitch", Content = "Бо це єдиний спосіб дізнатися правду..." },
+        new DialogueLine { Speaker = "Glitch", Content = "Бо це єдиний спосіб дізнатися правду. Ти ж не хочеш,\n" + 
+            "щоб його робота дісталася корпораціям?"},
 
         new DialogueLine { Speaker = "Alex", Content = "(Рішуче)\nГаразд. Я йду.\n" +
             "(Алекс бере кишеньковий гаджет батька, який завжди носив із собою, і виходить із квартири.)" }

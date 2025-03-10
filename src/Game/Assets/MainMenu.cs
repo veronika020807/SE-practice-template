@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void GamePause()
     {
-        Invoke("PlayGame", 0.3f);
+        Invoke("PlayGame", 1.2f);
     }
 
     public void PlayGame()

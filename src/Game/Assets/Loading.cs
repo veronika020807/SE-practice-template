@@ -21,7 +21,7 @@ public class IntroText : MonoBehaviour
         yield return ShowText("ГЛАВА 1: ПРОБУДЖЕННЯ");
         yield return ShowText("Сцена 1: Початок");
         yield return ShowText("[Система]: Підключення до мережі...");
-        yield return ShowText("[Попередження]: Виявлено стороннє втручання");
+        yield return ShowText("[Попередження]: Виявлено стороннє втручання.");
 
         // Затримка перед переходом на наступну сцену
         yield return new WaitForSeconds(sceneTransitionDelay);
