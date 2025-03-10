@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class DialogueManager2 : MonoBehaviour
+public class DialogueManager2_1 : MonoBehaviour
 {
     public Image Alex;
     public Image Frame;
@@ -24,8 +24,7 @@ public class DialogueManager2 : MonoBehaviour
         new DialogueLine { Speaker = "Alex", Content = "Нейрон-Сіті, 2147 рік. Алекс пробирається до старого корпусу університету, обходячи камери.\n" +
             "Він залазить у вентиляційний шахту, як його навчив батько." },
 
-        new DialogueLine { Speaker = "Alex", Content = "(Шепоче)\nАрхів має бути на третьому рівні...\n" +
-            "(Алекс потрапляє у приміщення зі старими серверами. На стіні – графіті з символом руху \"Вільний Код\". Алекс підключає гаджет до терміналу.)" },
+        new DialogueLine { Speaker = "Alex", Content = "(Шепоче)\nАрхів має бути на третьому рівні..."},
 
     };
 
@@ -63,7 +62,7 @@ public class DialogueManager2 : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f); // Невелика затримка перед переходом
-        SceneManager.LoadScene("Loading3"); // Завантаження наступної сцени
+        SceneManager.LoadScene("Loading2.2"); // Завантаження наступної сцени
     }
 
     void Update()

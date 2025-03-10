@@ -3,13 +3,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class IntroText3 : MonoBehaviour
+public class IntroText2_2 : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
     public float delayBeforeChange = 2f;
     public float fadeDuration = 1.5f;
     public float sceneTransitionDelay = 2f; // Час перед переходом
-    public string nextSceneName = "MainMenu"; // Назва наступної сцени
+    public string nextSceneName = "Loading3"; // Назва наступної сцени
 
     void Start()
     {
@@ -18,10 +18,10 @@ public class IntroText3 : MonoBehaviour
 
     IEnumerator DisplayTextSequence()
     {
-        yield return ShowText("ГЛАВА 2: ТІНІ МІНУЛОГО");
-        yield return ShowText("Сцена 1: Підпільна зустріч");
-        yield return ShowText("Алекс і Лекса ховаються у секретній кімнаті.");
-        yield return ShowText("Лекса активує голографічну карту міста,\nде блимають мітки з локаціями фрагментів коду.");
+        yield return ShowText("Перша головоломка");
+        yield return ShowText("Алекс потрапляє у приміщення зі старими серверами.");
+        yield return ShowText("На стіні – графіті з символом руху \"Вільний Код\".");
+        yield return ShowText("Алекс підключає гаджет до терміналу.");
 
         // Затримка перед переходом на наступну сцену
         yield return new WaitForSeconds(sceneTransitionDelay);

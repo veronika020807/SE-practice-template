@@ -1073,7 +1073,7 @@ GameObject:
   - component: {fileID: 1755516787}
   - component: {fileID: 1755516791}
   m_Layer: 5
-  m_Name: Scene2
+  m_Name: Scene2.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

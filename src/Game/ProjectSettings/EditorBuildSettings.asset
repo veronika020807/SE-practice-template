@@ -12,23 +12,26 @@ EditorBuildSettings:
     path: Assets/Instructions.unity
     guid: cf9d523ac8f337a44bb431943a66ca24
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Chapter 1/Loading1.unity
     guid: d5c58bee208e9d44a9d61ea2075e8d4d
-  - enabled: 1
-    path: Assets/Chapter 1/Loading2.unity
-    guid: bcd01c8aaf63ca849b58b76ab66c985c
-  - enabled: 1
-    path: Assets/Chapter 1/Loading3.unity
-    guid: 065d3b0d1a883ad498210792b9c9acf9
   - enabled: 1
     path: Assets/Chapter 1/Scene1.unity
     guid: 096c31f6828dcec4aa138db9dc4a4e1c
   - enabled: 1
-    path: Assets/Chapter 1/Scene2.unity
+    path: Assets/Chapter 1/Loading2.1.unity
+    guid: bcd01c8aaf63ca849b58b76ab66c985c
+  - enabled: 1
+    path: Assets/Chapter 1/Scene2.1.unity
     guid: 81302e070d793b9409773256c34d0de9
+  - enabled: 1
+    path: Assets/Chapter 1/Loading2.2.unity
+    guid: 065d3b0d1a883ad498210792b9c9acf9
+  - enabled: 1
+    path: Assets/Chapter 1/Scene2.2.unity
+    guid: c4b33b12c0904c94dbd705fc0b856a3c
+  - enabled: 1
+    path: Assets/Chapter 2/Loading3.unity
+    guid: 4ebf1d6495ffc5d428136fef58d0edec
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

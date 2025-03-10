@@ -38,7 +38,7 @@ public class DialogueManager1 : MonoBehaviour
         new DialogueLine { Speaker = "Alex", Content = "(Стискає кулаки)\nЧому я повинен тобі вірити?" },
 
         new DialogueLine { Speaker = "Glitch", Content = "Бо це єдиний спосіб дізнатися правду. Ти ж не хочеш,\n" + 
-            "щоб його робота дісталася корпораціям?"},
+            "щоб його робота дісталася корпораціям?\n" + "(На екрані спалахує файл із символом, який Алекс впізнає – це особистий знак його батька.)"},
 
         new DialogueLine { Speaker = "Alex", Content = "(Рішуче)\nГаразд. Я йду.\n" +
             "(Алекс бере кишеньковий гаджет батька, який завжди носив із собою, і виходить із квартири.)" }
@@ -81,7 +81,7 @@ public class DialogueManager1 : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f); // Невелика затримка перед переходом
-        SceneManager.LoadScene("Loading2"); // Завантаження наступної сцени
+        SceneManager.LoadScene("Loading2.1"); // Завантаження наступної сцени
     }
 
     void Update()

@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 1084921492}
   - component: {fileID: 1084921496}
   m_Layer: 5
-  m_Name: Loading
+  m_Name: Loading2.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -459,7 +459,7 @@ MonoBehaviour:
   delayBeforeChange: 2
   fadeDuration: 1.5
   sceneTransitionDelay: 2
-  nextSceneName: Scene1
+  nextSceneName: Scene2.2
 --- !u!1 &1088936939
 GameObject:
   m_ObjectHideFlags: 0

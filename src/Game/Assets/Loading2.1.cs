@@ -3,13 +3,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class IntroText2 : MonoBehaviour
+public class IntroText2_1 : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
     public float delayBeforeChange = 2f;
     public float fadeDuration = 1.5f;
     public float sceneTransitionDelay = 2f; // Час перед переходом
-    public string nextSceneName = "Scene2"; // Назва наступної сцени
+    public string nextSceneName = "Scene2.1"; // Назва наступної сцени
 
     void Start()
     {
