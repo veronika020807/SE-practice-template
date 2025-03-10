@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueManager1 : MonoBehaviour
 {
     public Image Alex;
     public Image Glitch;
@@ -81,7 +81,7 @@ public class DialogueManager : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f); // Невелика затримка перед переходом
-        SceneManager.LoadScene("Scene2"); // Завантаження наступної сцени
+        SceneManager.LoadScene("Loading2"); // Завантаження наступної сцени
     }
 
     void Update()

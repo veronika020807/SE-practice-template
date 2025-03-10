@@ -1,15 +1,15 @@
-п»їusing System.Collections;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class IntroText : MonoBehaviour
+public class IntroText2 : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
     public float delayBeforeChange = 2f;
     public float fadeDuration = 1.5f;
-    public float sceneTransitionDelay = 2f; // Р§Р°СЃ РїРµСЂРµРґ РїРµСЂРµС…РѕРґРѕРј
-    public string nextSceneName = "Scene1"; // РќР°Р·РІР° РЅР°СЃС‚СѓРїРЅРѕС— СЃС†РµРЅРё
+    public float sceneTransitionDelay = 2f; // Час перед переходом
+    public string nextSceneName = "Scene2"; // Назва наступної сцени
 
     void Start()
     {
@@ -18,12 +18,9 @@ public class IntroText : MonoBehaviour
 
     IEnumerator DisplayTextSequence()
     {
-        yield return ShowText("Р“Р›РђР’Рђ 1: РџР РћР‘РЈР”Р–Р•РќРќРЇ");
-        yield return ShowText("РЎС†РµРЅР° 1: РџРѕС‡Р°С‚РѕРє");
-        yield return ShowText("[РЎРёСЃС‚РµРјР°]: РџС–РґРєР»СЋС‡РµРЅРЅСЏ РґРѕ РјРµСЂРµР¶С–...");
-        yield return ShowText("[РџРѕРїРµСЂРµРґР¶РµРЅРЅСЏ]: Р’РёСЏРІР»РµРЅРѕ СЃС‚РѕСЂРѕРЅРЅС” РІС‚СЂСѓС‡Р°РЅРЅСЏ.");
+        yield return ShowText("Сцена 2: Університетський архів");
 
-        // Р—Р°С‚СЂРёРјРєР° РїРµСЂРµРґ РїРµСЂРµС…РѕРґРѕРј РЅР° РЅР°СЃС‚СѓРїРЅСѓ СЃС†РµРЅСѓ
+        // Затримка перед переходом на наступну сцену
         yield return new WaitForSeconds(sceneTransitionDelay);
         SceneManager.LoadScene(nextSceneName);
     }

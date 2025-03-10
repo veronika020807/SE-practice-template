@@ -7,16 +7,28 @@
       "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\scene2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|c:\\se-practice-template\\src\\game\\assets\\scene1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\scene1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|c:\\se-practice-template\\src\\game\\assets\\loading3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\loading3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|C:\\SE-practice-template\\src\\Game\\assets\\loading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\loading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|C:\\SE-practice-template\\src\\Game\\assets\\loading1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\loading1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|C:\\SE-practice-template\\src\\Game\\assets\\instructions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\instructions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|C:\\SE-practice-template\\src\\Game\\assets\\loading2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\loading2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|C:\\SE-practice-template\\src\\Game\\assets\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|C:\\SE-practice-template\\src\\Game\\assets\\scene1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\scene1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,53 +66,90 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Loading3.cs",
+              "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading3.cs",
+              "RelativeDocumentMoniker": "Assets\\Loading3.cs",
+              "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading3.cs",
+              "RelativeToolTip": "Assets\\Loading3.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T21:50:08.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Instructions.cs",
+              "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Instructions.cs",
+              "RelativeDocumentMoniker": "Assets\\Instructions.cs",
+              "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Instructions.cs",
+              "RelativeToolTip": "Assets\\Instructions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T21:33:03.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Loading2.cs",
+              "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading2.cs",
+              "RelativeDocumentMoniker": "Assets\\Loading2.cs",
+              "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading2.cs",
+              "RelativeToolTip": "Assets\\Loading2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T21:11:35.558Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Scene2.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Scene2.cs",
               "RelativeDocumentMoniker": "Assets\\Scene2.cs",
-              "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Scene2.cs",
-              "RelativeToolTip": "Assets\\Scene2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Scene2.cs*",
+              "RelativeToolTip": "Assets\\Scene2.cs*",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T20:05:28.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Scene1.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Scene1.cs",
               "RelativeDocumentMoniker": "Assets\\Scene1.cs",
               "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Scene1.cs",
               "RelativeToolTip": "Assets\\Scene1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T19:18:17.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T19:18:17.905Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\MainMenu.cs",
               "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\MainMenu.cs",
               "RelativeToolTip": "Assets\\MainMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T18:31:19.145Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Loading.cs",
-              "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading.cs",
-              "RelativeDocumentMoniker": "Assets\\Loading.cs",
-              "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading.cs",
-              "RelativeToolTip": "Assets\\Loading.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABFAAAAAAAAAA==",
+              "Title": "Loading1.cs",
+              "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading1.cs",
+              "RelativeDocumentMoniker": "Assets\\Loading1.cs",
+              "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading1.cs",
+              "RelativeToolTip": "Assets\\Loading1.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T18:28:39.789Z"
+              "WhenOpened": "2025-03-10T18:28:39.789Z",
+              "EditorCaption": ""
             }
           ]
         }
