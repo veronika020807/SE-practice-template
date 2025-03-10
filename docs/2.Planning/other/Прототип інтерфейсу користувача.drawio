@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0" version="26.1.0">
+  <diagram name="Страница — 1" id="4jOH1Pgy1eUIpc4Hq2XW">
+    <mxGraphModel dx="1186" dy="1951" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TiAIuxmOph-ev7_An_PO-7" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E2E2E2;" vertex="1" parent="1">
+          <mxGeometry x="1" y="521" width="826" height="526" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E2E2E2;" vertex="1" parent="1">
+          <mxGeometry x="1" y="-5" width="826" height="526" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-1" value="&lt;font style=&quot;font-size: 48px;&quot;&gt;Логотип&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="185" y="62" width="458" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-3" value="&lt;font style=&quot;font-size: 46px;&quot;&gt;Старт&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="582" y="240" width="228" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-4" value="&lt;font style=&quot;font-size: 46px;&quot;&gt;Інструкція&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="582" y="335" width="228" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-5" value="&lt;font style=&quot;font-size: 46px;&quot;&gt;Вихід&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="582" y="430" width="228" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-8" value="&lt;span style=&quot;font-size: 46px;&quot;&gt;Головне меню&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="178" y="645" width="487" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-14" value="&lt;font style=&quot;font-size: 46px;&quot;&gt;Інструкція&lt;/font&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="179" y="723" width="485" height="282" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-15" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E2E2E2;" vertex="1" parent="1">
+          <mxGeometry y="1047" width="826" height="526" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-18" value="&lt;span style=&quot;font-size: 17px;&quot;&gt;&amp;nbsp;Спрайт персонажу&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="8" y="1230" width="169" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-19" value="&lt;span style=&quot;font-size: 17px;&quot;&gt;&amp;nbsp;Спрайт персонажу&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="623" y="1230" width="180" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-17" value="&lt;font style=&quot;font-size: 46px;&quot;&gt;Діалоги та дії персонажів&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="106" y="1422" width="631" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-20" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;Звук&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="8" y="1063" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-21" value="Ім&#39;я діючого персонажу" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="125" y="1394" width="138" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-22" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;Звук&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="8" y="979" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TiAIuxmOph-ev7_An_PO-23" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;Звук&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=5;" vertex="1" parent="1">
+          <mxGeometry x="16" y="450" width="60" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
