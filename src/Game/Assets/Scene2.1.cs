@@ -21,7 +21,7 @@ public class DialogueManager2_1 : MonoBehaviour
 
     private DialogueLine[] dialogue = new DialogueLine[]
     {
-        new DialogueLine { Speaker = "Alex", Content = "Нейрон-Сіті, 2147 рік. Алекс пробирається до старого корпусу університету, обходячи камери.\n" +
+        new DialogueLine { Speaker = "Narrator", Content = "Нейрон-Сіті, 2147 рік. Алекс пробирається до старого корпусу університету, обходячи камери.\n" +
             "Він залазить у вентиляційний шахту, як його навчив батько." },
 
         new DialogueLine { Speaker = "Alex", Content = "(Шепоче)\nАрхів має бути на третьому рівні..."},
@@ -46,6 +46,12 @@ public class DialogueManager2_1 : MonoBehaviour
             {
                 Alex.gameObject.SetActive(true);
             }
+
+            else if (dialogue[dialogueIndex].Speaker == "Narrator")
+            {
+                Alex.gameObject.SetActive(false);
+            }
+
             else
             {
                 Alex.gameObject.SetActive(false);

@@ -77,7 +77,7 @@ public class DialogueManager3_4 : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Loading4"); // Завантаження наступної сцени
+        SceneManager.LoadScene("Loading4.2"); // Завантаження наступної сцени
     }
 
     void Update()

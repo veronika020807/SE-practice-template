@@ -22,26 +22,27 @@ public class DialogueManager1 : MonoBehaviour
 
     private DialogueLine[] dialogue = new DialogueLine[]
     {
-        new DialogueLine { Speaker = "Alex", Content = "З’являється головний герой – Алекс, 22 роки, програміст-початківець. Він сидить у своїй скромній кіберквартирі, " +
-            "заваленій технікою. На столі – фотографія його батька, відомого хакера, який зник роком раніше.)" },
+        new DialogueLine { Speaker = "Alex", Content = "(Тихо до себе)\nЩе одна ніч, ще одне дрібне замовлення...\n"},
 
-        new DialogueLine { Speaker = "Alex", Content = "(Тихо до себе)\nЩе одна ніч, ще одне дрібне замовлення...\n" +
-            "(Раптом з'являється персонаж – Глітч.)" },
+        new DialogueLine { Speaker = "Narrator", Content = "(Раптом з'являється персонаж – Глітч.)"},
 
         new DialogueLine { Speaker = "Glitch", Content = "(Спотворним голосом)\nПривіт, Алекс. Ти шукав відповіді про свого батька?" },
 
         new DialogueLine { Speaker = "Alex", Content = "(Різко підводиться)\nХто ти? Що ти знаєш про нього?" },
 
-        new DialogueLine { Speaker = "Glitch", Content = "Він залишив тобі послання. Код, розділений на чотири частини.\n" + 
+        new DialogueLine { Speaker = "Glitch", Content = "Він залишив тобі послання. Код, розділений на чотири частини.\n" +
             "Перша - у архіві університету, де він колись працював."},
 
         new DialogueLine { Speaker = "Alex", Content = "(Стискає кулаки)\nЧому я повинен тобі вірити?" },
 
-        new DialogueLine { Speaker = "Glitch", Content = "Бо це єдиний спосіб дізнатися правду. Ти ж не хочеш,\n" + 
-            "щоб його робота дісталася корпораціям?\n" + "(На екрані спалахує файл із символом, який Алекс впізнає – це особистий знак його батька.)"},
+        new DialogueLine { Speaker = "Glitch", Content = "Бо це єдиний спосіб дізнатися правду. Ти ж не хочеш,\n" +
+            "щоб його робота дісталася корпораціям?\n"},
 
-        new DialogueLine { Speaker = "Alex", Content = "(Рішуче)\nГаразд. Я йду.\n" +
-            "(Алекс бере кишеньковий гаджет батька, який завжди носив із собою, і виходить із квартири.)" }
+        new DialogueLine { Speaker = "Narrator", Content = "(На екрані спалахує файл із символом, який Алекс впізнає – це особистий знак його батька.)"},
+
+        new DialogueLine { Speaker = "Alex", Content = "(Рішуче)\nГаразд. Я йду.\n"},
+
+        new DialogueLine { Speaker = "Narrator", Content = "(Алекс бере кишеньковий гаджет батька, який завжди носив із собою, і виходить із квартири.)"},
     };
 
     void Start()
@@ -64,6 +65,13 @@ public class DialogueManager1 : MonoBehaviour
                 Alex.gameObject.SetActive(true);
                 Glitch.gameObject.SetActive(false);
             }
+
+            else if (dialogue[dialogueIndex].Speaker == "Narrator")
+            {
+                Alex.gameObject.SetActive(false);
+                Glitch.gameObject.SetActive(false);
+            }
+
             else
             {
                 Alex.gameObject.SetActive(false);

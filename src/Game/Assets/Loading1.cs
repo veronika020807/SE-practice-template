@@ -22,6 +22,9 @@ public class IntroText1 : MonoBehaviour
         yield return ShowText("Сцена 1: Початок");
         yield return ShowText("[Система]: Підключення до мережі...");
         yield return ShowText("[Попередження]: Виявлено стороннє втручання.");
+        yield return ShowText("З’являється головний герой – Алекс, 22 роки, програміст-початківець.");
+        yield return ShowText("Він сидить у своїй скромній кіберквартирі, заваленій технікою.");
+        yield return ShowText("На столі – фотографія його батька, відомого хакера, який зник роком раніше.");
 
         // Затримка перед переходом на наступну сцену
         yield return new WaitForSeconds(sceneTransitionDelay);

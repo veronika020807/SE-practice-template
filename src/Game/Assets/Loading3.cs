@@ -18,7 +18,7 @@ public class IntroText3 : MonoBehaviour
 
     IEnumerator DisplayTextSequence()
     {
-        yield return ShowText("ГЛАВА 2: ТІНІ МІНУЛОГО");
+        yield return ShowText("ГЛАВА 2: ТІНІ МИНУЛОГО");
         yield return ShowText("Сцена 1: Підпільна зустріч");
         yield return ShowText("Алекс і Лекса ховаються у секретній кімнаті.");
         yield return ShowText("Лекса активує голографічну карту міста,\nде блимають мітки з локаціями фрагментів коду.");
