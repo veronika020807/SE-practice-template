@@ -9,7 +9,7 @@ public class IntroText3 : MonoBehaviour
     public float delayBeforeChange = 2f;
     public float fadeDuration = 1.5f;
     public float sceneTransitionDelay = 2f; // Час перед переходом
-    public string nextSceneName = "MainMenu"; // Назва наступної сцени
+    public string nextSceneName = "Scene3"; // Назва наступної сцени
 
     void Start()
     {

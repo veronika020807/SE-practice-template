@@ -18,7 +18,7 @@ public class IntroText2_2 : MonoBehaviour
 
     IEnumerator DisplayTextSequence()
     {
-        yield return ShowText("Перша головоломка");
+        yield return ShowText("Головоломка 1");
         yield return ShowText("Алекс потрапляє у приміщення зі старими серверами.");
         yield return ShowText("На стіні – графіті з символом руху \"Вільний Код\".");
         yield return ShowText("Алекс підключає гаджет до терміналу.");

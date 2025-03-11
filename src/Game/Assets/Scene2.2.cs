@@ -28,7 +28,7 @@ public class DialogueManager2_2 : MonoBehaviour
             "(Після успіху файл розшифровується. На екрані – голосове повідомлення батька.)"},
          new DialogueLine { Speaker = "Father's voice", Content = "\"Алексе... якщо ти це чуєш, значить, я не встиг.\n\"Прометей\" – це ключ до системи NeuraTech.\nЗбери всі частини, перш ніж вони їх знайдуть...\""},
          new DialogueLine { Speaker = "Father's voice", Content = "(Раптом лунає сирена. Алекс виймає флешку з даними.)"},
-         new DialogueLine { Speaker = "Alex", Content = "(панікує)\nЯ ж нічого не чіпав! Хіба що...\n"},
+         new DialogueLine { Speaker = "Alex", Content = "(Панікує)\nЯ ж нічого не чіпав! Хіба що...\n"},
          new DialogueLine { Speaker = "Alex", Content = "Трясця! Мене ввели в пастку...\n(Він тікає, стискаючи флешку. У тіні маячить силует дрона з логотипом NeuraTech.)"}
     };
 
