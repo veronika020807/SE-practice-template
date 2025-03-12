@@ -8,6 +8,7 @@ public class DialogueManager3_4 : MonoBehaviour
 {
     public Image Alex;
     public Image Lexa;
+    public Image Father;
     public Image Frame;
     public TextMeshProUGUI NamePers;
     public TextMeshProUGUI Text;
@@ -38,6 +39,7 @@ public class DialogueManager3_4 : MonoBehaviour
     void Start()
     {
         Lexa.gameObject.SetActive(false);
+        Father.gameObject.SetActive(false); // Hide Father's photo initially
         Frame.gameObject.SetActive(true);
         Text.alignment = TextAlignmentOptions.Justified;
         ShowDialogue();
@@ -54,16 +56,26 @@ public class DialogueManager3_4 : MonoBehaviour
             {
                 Alex.gameObject.SetActive(true);
                 Lexa.gameObject.SetActive(false);
+                Father.gameObject.SetActive(false); // Hide Father's photo during Alex's dialogue
             }
             else if (dialogue[dialogueIndex].Speaker == "Lexa")
             {
                 Alex.gameObject.SetActive(false);
                 Lexa.gameObject.SetActive(true);
+                Father.gameObject.SetActive(false); // Hide Father's photo during Lexa's dialogue
+            }
+            else if (dialogue[dialogueIndex].Speaker == "Father's voice")
+            {
+                // Show Father's photo when he speaks
+                Alex.gameObject.SetActive(false);
+                Lexa.gameObject.SetActive(false);
+                Father.gameObject.SetActive(true); // Show Father's photo during his voice line
             }
             else
             {
                 Alex.gameObject.SetActive(false);
                 Lexa.gameObject.SetActive(false);
+                Father.gameObject.SetActive(false); // Hide Father's photo during Narrator's dialogue
             }
 
             dialogueIndex++;
@@ -77,7 +89,7 @@ public class DialogueManager3_4 : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Loading4.2"); // Завантаження наступної сцени
+        SceneManager.LoadScene("Loading4.1"); // Завантаження наступної сцени
     }
 
     void Update()

@@ -26,9 +26,6 @@ public class DialogueManager3_2 : MonoBehaviour
 
         new DialogueLine { Speaker = "Lexa", Content = "Він вірив, що технології мають об’єднувати, а не контролювати. Але NeuraTech викрали його розробки..." },
 
-        new DialogueLine { Speaker = "Narrator", Content = "(Раптом спрацьовує лазерна пастка. Лекса штовхає Алекса вбік.)" },
-
-        new DialogueLine { Speaker = "Lexa", Content = "Обережно! Це система захисту лабораторії. Тут все під контролем ШІ." }
     };
 
     void Start()
@@ -73,7 +70,7 @@ public class DialogueManager3_2 : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Loading3.3"); // Завантаження наступної сцени
+        SceneManager.LoadScene("Loading3.4"); // Завантаження наступної сцени
     }
 
     void Update()

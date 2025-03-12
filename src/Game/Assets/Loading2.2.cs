@@ -1,53 +1,85 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class IntroText2_2 : MonoBehaviour
 {
-    public TextMeshProUGUI textDisplay;
-    public float delayBeforeChange = 2f;
-    public float fadeDuration = 1.5f;
-    public float sceneTransitionDelay = 2f; // ��� ����� ���������
-    public string nextSceneName = "Loading3"; // ����� �������� �����
+    public TextMeshProUGUI textDisplay; // Виведення тексту
+    public TMP_InputField answerInput; // Поле для введення
+    public Button buttonReload; // Кнопка повторення
+    public float textSpeed = 0.05f; // Швидкість друкування тексту
+    public string nextSceneName = "Loading3"; // Назва наступної сцени
+
+    private int correctAnswer = 3; // Правильна відповідь
 
     void Start()
     {
+        buttonReload.gameObject.SetActive(false); // Ховаємо кнопку повтору
+        answerInput.gameObject.SetActive(false); // Ховаємо поле для введення
+        answerInput.onSubmit.AddListener(delegate { CheckAnswer(); }); // Додаємо обробник для введення
         StartCoroutine(DisplayTextSequence());
     }
 
     IEnumerator DisplayTextSequence()
     {
-        yield return ShowText("����������� 1");
-        yield return ShowText("����� ��������� � ��������� � ������� ���������.");
-        yield return ShowText("�� ���� � ������ � �������� ���� \"³����� ���\".");
-        yield return ShowText("����� ������� ������ �� ��������.");
+        yield return ShowText("**Головоломка 1**");
+        yield return ShowText("**Завдання:**");
+        yield return ShowText("Glitch");
+        yield return ShowText("Glitch");
+        yield return ShowText("Alex");
+        yield return ShowText("Glitch");
+        yield return ShowText("Glitch");
+        yield return ShowText("Alex");
+        yield return ShowText("Glitch");
+        yield return ShowText("Alex");
+        yield return ShowText("**Питання: Скільки разів вивелося ім'я Alex?**");
 
-        // �������� ����� ��������� �� �������� �����
-        yield return new WaitForSeconds(sceneTransitionDelay);
-        SceneManager.LoadScene(nextSceneName);
+        // Показуємо поле для введення після завершення текстової послідовності
+        answerInput.gameObject.SetActive(true);
     }
 
     IEnumerator ShowText(string message)
     {
-        textDisplay.text = message;
-        yield return FadeText(1f);
-        yield return new WaitForSeconds(delayBeforeChange);
-        yield return FadeText(0f);
+        textDisplay.text = "";
+        foreach (char letter in message)
+        {
+            textDisplay.text += letter;
+            yield return new WaitForSeconds(textSpeed);
+        }
+        yield return new WaitForSeconds(1.5f);
     }
 
-    IEnumerator FadeText(float targetAlpha)
+    public void CheckAnswer()
     {
-        float startAlpha = textDisplay.color.a;
-        float time = 0f;
+        int playerAnswer;
+        bool isNumber = int.TryParse(answerInput.text, out playerAnswer);
 
-        while (time < fadeDuration)
+        if (isNumber && playerAnswer == correctAnswer)
         {
-            time += Time.deltaTime;
-            float alpha = Mathf.Lerp(startAlpha, targetAlpha, time / fadeDuration);
-            textDisplay.color = new Color(textDisplay.color.r, textDisplay.color.g, textDisplay.color.b, alpha);
-            yield return null;
+            textDisplay.text = "**1 карта пам'яті знайдено!**";
+            buttonReload.gameObject.SetActive(false);
+            StartCoroutine(LoadNextScene());
+        }
+        else
+        {
+            textDisplay.text = "**Неправильна відповідь. Спробуйте ще раз!**";
+            buttonReload.gameObject.SetActive(true);
         }
     }
 
+    public void RetryPuzzle()
+    {
+        answerInput.text = ""; // Очистити поле
+        answerInput.gameObject.SetActive(false); // Сховати поле для введення
+        buttonReload.gameObject.SetActive(false); // Сховати кнопку
+        StartCoroutine(DisplayTextSequence()); // Повторно запустити текстову послідовність
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(nextSceneName);
+    }
 }
