@@ -8,6 +8,7 @@ public class DialogueManager4_2 : MonoBehaviour
 {
     public Image Alex;
     public Image Lexa;
+    public Image Cyber_​​Raven;
     public Image Frame;
     public TextMeshProUGUI NamePers;
     public TextMeshProUGUI Text;
@@ -54,10 +55,12 @@ public class DialogueManager4_2 : MonoBehaviour
             {
                 Alex.gameObject.SetActive(true);
                 Lexa.gameObject.SetActive(false);
+                Cyber_​​Raven.gameObject.SetActive(false);
             }
 
             else if (dialogue[dialogueIndex].Speaker == "Narrator")
             {
+                Cyber_​​Raven.gameObject.SetActive(false);
                 Lexa.gameObject.SetActive(false);
                 Alex.gameObject.SetActive(false);
                 Frame.gameObject.SetActive(true);
@@ -65,6 +68,7 @@ public class DialogueManager4_2 : MonoBehaviour
 
             else if (dialogue[dialogueIndex].Speaker == "Cyber ​​Raven")
             {
+                Cyber_​​Raven.gameObject.SetActive(true);
                 Lexa.gameObject.SetActive(false);
                 Alex.gameObject.SetActive(false);
                 Frame.gameObject.SetActive(true);
@@ -73,6 +77,7 @@ public class DialogueManager4_2 : MonoBehaviour
             else if (dialogue[dialogueIndex].Speaker == "Lexa")
             {
                 Alex.gameObject.SetActive(false);
+                Cyber_​​Raven.gameObject.SetActive(false);
                 Lexa.gameObject.SetActive(true);
             }
             else
@@ -92,7 +97,7 @@ public class DialogueManager4_2 : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Loading4.3"); // Завантаження наступної сцени
+        SceneManager.LoadScene("Loading4.4"); // Завантаження наступної сцени
     }
 
     void Update()

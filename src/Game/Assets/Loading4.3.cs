@@ -9,7 +9,7 @@ public class IntroText4_3 : MonoBehaviour
     public float delayBeforeChange = 2f;
     public float fadeDuration = 1.5f;
     public float sceneTransitionDelay = 2f; // Час перед переходом
-    public string nextSceneName = "MainMenu"; // Назва наступної сцени
+    public string nextSceneName = "Scene4.2"; // Назва наступної сцени
 
     void Start()
     {
@@ -18,11 +18,11 @@ public class IntroText4_3 : MonoBehaviour
 
     IEnumerator DisplayTextSequence()
     {
-        yield return ShowText("Сцена: Центральне ядро");
-        yield return ShowText("Підземний комплекс з кібернетичним \"мозком\" NeuraTech — велетенською сферою,опутаною проводами.");
-        yield return ShowText("Алекс підключається до системи, але ШІ пропонує угоду.");
-        yield return ShowText("AI NeuraTech: Віддай код, і я поверну твого батька.\nВідмовишся — він загине.");
-        yield return ShowText("Головоломка : Розкол");
+        yield return ShowText("Система: [Доступ надано].\nЛаскаво просимо, інженер Грей.");
+        yield return ShowText("Сцена 2: Сховище 9-B");
+        yield return ShowText("Кімната з кубічними модулями даних.");
+        yield return ShowText("Алекс знаходить третій фрагмент коду, але раптом з’являється Кібер-Ворон — помічник батька, який тепер підключений до систем NeuraTech.");
+        
 
         // Затримка перед переходом на наступну сцену
         yield return new WaitForSeconds(sceneTransitionDelay);

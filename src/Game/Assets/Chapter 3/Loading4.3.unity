@@ -759,7 +759,7 @@ MonoBehaviour:
   delayBeforeChange: 2
   fadeDuration: 1.5
   sceneTransitionDelay: 2
-  nextSceneName: MainMenu
+  nextSceneName: Scene4.2
 --- !u!1 &1957351325
 GameObject:
   m_ObjectHideFlags: 0
