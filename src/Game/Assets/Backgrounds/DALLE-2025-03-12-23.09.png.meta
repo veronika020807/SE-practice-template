@@ -212,7 +212,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DALLE-2025-03-12-23.09_0: 6464220571191537183
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

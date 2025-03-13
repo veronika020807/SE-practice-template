@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\SE-practice-template\\src\\Game\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|C:\\SE-practice-template\\src\\Game\\assets\\loading4.2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\loading4.2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|c:\\se-practice-template\\src\\game\\assets\\loading3.3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\loading3.3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|C:\\SE-practice-template\\src\\Game\\assets\\final2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\final2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|c:\\se-practice-template\\src\\game\\assets\\the ending.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\the ending.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|c:\\se-practice-template\\src\\game\\assets\\loading3.3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\loading3.3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|C:\\SE-practice-template\\src\\Game\\assets\\choicetext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,10 +75,6 @@
       "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\scene4.2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|C:\\SE-practice-template\\src\\Game\\assets\\loading4.2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\loading4.2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|C:\\SE-practice-template\\src\\Game\\assets\\scene4.1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\scene4.1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -94,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -122,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "The ending.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\The ending.cs",
               "RelativeDocumentMoniker": "Assets\\The ending.cs",
@@ -135,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Loading3.3.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading3.3.cs",
               "RelativeDocumentMoniker": "Assets\\Loading3.3.cs",
@@ -148,12 +148,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Final2.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Final2.cs",
               "RelativeDocumentMoniker": "Assets\\Final2.cs",
-              "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Final2.cs*",
-              "RelativeToolTip": "Assets\\Final2.cs*",
+              "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Final2.cs",
+              "RelativeToolTip": "Assets\\Final2.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAAADcAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T00:28:06.595Z",
@@ -161,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Final1.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Final1.cs",
               "RelativeDocumentMoniker": "Assets\\Final1.cs",
@@ -174,19 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Scene1.cs",
-              "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Scene1.cs",
-              "RelativeDocumentMoniker": "Assets\\Scene1.cs",
-              "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Scene1.cs",
-              "RelativeToolTip": "Assets\\Scene1.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAswGYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T00:16:00.196Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Loading3.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading3.cs",
               "RelativeDocumentMoniker": "Assets\\Loading3.cs",
@@ -198,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\MainMenu.cs",
@@ -210,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ChoiceText.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\ChoiceText.cs",
               "RelativeDocumentMoniker": "Assets\\ChoiceText.cs",
@@ -222,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Scene3.1.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Scene3.1.cs",
               "RelativeDocumentMoniker": "Assets\\Scene3.1.cs",
@@ -234,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Loading5.2.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading5.2.cs",
               "RelativeDocumentMoniker": "Assets\\Loading5.2.cs",
@@ -246,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Choice.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Choice.cs",
               "RelativeDocumentMoniker": "Assets\\Choice.cs",
@@ -258,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Loading4.1.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading4.1.cs",
               "RelativeDocumentMoniker": "Assets\\Loading4.1.cs",
@@ -267,6 +255,31 @@
               "ViewState": "AgIAAA4AAAAAAAAAAAAswDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T22:42:06.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Loading4.2.cs",
+              "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading4.2.cs",
+              "RelativeDocumentMoniker": "Assets\\Loading4.2.cs",
+              "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading4.2.cs",
+              "RelativeToolTip": "Assets\\Loading4.2.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAA4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T20:40:28.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Scene1.cs",
+              "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Scene1.cs",
+              "RelativeDocumentMoniker": "Assets\\Scene1.cs",
+              "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Scene1.cs",
+              "RelativeToolTip": "Assets\\Scene1.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAswGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T00:16:00.196Z"
             },
             {
               "$type": "Document",
@@ -282,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Loading5.1.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading5.1.cs",
               "RelativeDocumentMoniker": "Assets\\Loading5.1.cs",
@@ -294,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Scene5.1.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Scene5.1.cs",
               "RelativeDocumentMoniker": "Assets\\Scene5.1.cs",
@@ -330,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Loading4.4.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading4.4.cs",
               "RelativeDocumentMoniker": "Assets\\Loading4.4.cs",
@@ -342,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Loading4.3.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading4.3.cs",
               "RelativeDocumentMoniker": "Assets\\Loading4.3.cs",
@@ -355,18 +368,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "Loading4.2.cs",
-              "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading4.2.cs",
-              "RelativeDocumentMoniker": "Assets\\Loading4.2.cs",
-              "ToolTip": "C:\\SE-practice-template\\src\\Game\\Assets\\Loading4.2.cs",
-              "RelativeToolTip": "Assets\\Loading4.2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T20:40:28.145Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
               "Title": "Scene4.2.cs",
               "DocumentMoniker": "C:\\SE-practice-template\\src\\Game\\Assets\\Scene4.2.cs",
               "RelativeDocumentMoniker": "Assets\\Scene4.2.cs",
