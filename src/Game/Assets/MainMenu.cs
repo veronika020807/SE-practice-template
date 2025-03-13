@@ -12,6 +12,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Chapter 1/Loading1");
     }
+    public void QuitPause()
+    {
+        Invoke("QuitGame", 1.0f);
+    }
 
     public void QuitGame()
     {
