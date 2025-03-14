@@ -12,13 +12,26 @@ public class IntroText3_1 : MonoBehaviour
     public float textSpeed = 0.1f; // Швидкість друкування тексту
     public string nextSceneName = "Scene3.1"; // Назва наступної сцени
 
+    public AudioSource startSound; // Звук на початку головоломки
+    public AudioSource correctAnswerSound; // Звук при правильній відповіді
+
     private int correctAnswer = 21; // Правильна відповідь
+    private bool hasPlayedCorrectSound = false; // Флаг для контроля звука правильного ответа
+    private bool hasAnsweredCorrectly = false; // Флаг, чтобы не допускать повторной проверки
 
     void Start()
     {
-        buttonReload.gameObject.SetActive(false); // Ховаємо кнопку повтору
-        answerInput.gameObject.SetActive(false); // Ховаємо поле для введення
-        answerInput.onSubmit.AddListener(delegate { CheckAnswer(); }); // Додаємо обробник для введення
+        buttonReload.gameObject.SetActive(false);
+        answerInput.gameObject.SetActive(false);
+
+        answerInput.onSubmit.RemoveAllListeners();
+        answerInput.onSubmit.AddListener(delegate { CheckAnswer(); });
+
+        if (startSound != null)
+        {
+            startSound.Play(); // Воспроизводим звук в начале головоломки
+        }
+
         StartCoroutine(DisplayTextSequence());
     }
 
@@ -31,7 +44,6 @@ public class IntroText3_1 : MonoBehaviour
         yield return ShowText("Ключ: Число (А) * Число(B)");
         yield return ShowText("**Питання: Яке значення має змінна \"Ключ\"?**");
 
-        // Показуємо поле для введення після завершення текстової послідовності
         answerInput.gameObject.SetActive(true);
     }
 
@@ -48,14 +60,31 @@ public class IntroText3_1 : MonoBehaviour
 
     public void CheckAnswer()
     {
+        if (hasAnsweredCorrectly) return; // Запрещаем повторное срабатывание
+
         int playerAnswer;
         bool isNumber = int.TryParse(answerInput.text, out playerAnswer);
 
         if (isNumber && playerAnswer == correctAnswer)
         {
+            hasAnsweredCorrectly = true;
             textDisplay.text = "**2 карта пам'яті знайдено!**";
             buttonReload.gameObject.SetActive(false);
-            StartCoroutine(LoadNextScene());
+
+            answerInput.interactable = false;
+            answerInput.gameObject.SetActive(false);
+            answerInput.onSubmit.RemoveAllListeners();
+
+            if (correctAnswerSound != null && !hasPlayedCorrectSound)
+            {
+                hasPlayedCorrectSound = true;
+                correctAnswerSound.Play();
+                StartCoroutine(LoadNextScene(correctAnswerSound.clip.length)); // Ждём окончания звука перед сценой
+            }
+            else
+            {
+                StartCoroutine(LoadNextScene(0f));
+            }
         }
         else
         {
@@ -66,15 +95,22 @@ public class IntroText3_1 : MonoBehaviour
 
     public void RetryPuzzle()
     {
-        answerInput.text = ""; // Очистити поле
-        answerInput.gameObject.SetActive(false); // Сховати поле для введення
-        buttonReload.gameObject.SetActive(false); // Сховати кнопку
-        StartCoroutine(DisplayTextSequence()); // Повторно запустити текстову послідовність
+        answerInput.text = "";
+        answerInput.gameObject.SetActive(false);
+        buttonReload.gameObject.SetActive(false);
+        hasPlayedCorrectSound = false;
+        hasAnsweredCorrectly = false;
+
+        answerInput.interactable = true;
+        answerInput.onSubmit.RemoveAllListeners();
+        answerInput.onSubmit.AddListener(delegate { CheckAnswer(); });
+
+        StartCoroutine(DisplayTextSequence());
     }
 
-    IEnumerator LoadNextScene()
+    IEnumerator LoadNextScene(float delay)
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(nextSceneName);
     }
 }

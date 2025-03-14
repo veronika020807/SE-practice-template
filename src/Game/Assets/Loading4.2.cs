@@ -12,13 +12,26 @@ public class IntroText4_2 : MonoBehaviour
     public float textSpeed = 0.1f; // Швидкість друкування тексту
     public string nextSceneName = "Loading 4.3"; // Назва наступної сцени
 
+    public AudioSource startSound; // Звук на початку головоломки
+    public AudioSource correctAnswerSound; // Звук при правильній відповіді
+
     private int correctAnswer = 1; // Правильна відповідь
+    private bool hasPlayedCorrectSound = false; // Флаг, щоб звук грав тільки один раз
+    private bool hasAnsweredCorrectly = false; // Флаг, щоб запобігти повторному введенню
 
     void Start()
     {
-        buttonReload.gameObject.SetActive(false); // Ховаємо кнопку повтору
-        answerInput.gameObject.SetActive(false); // Ховаємо поле для введення
-        answerInput.onSubmit.AddListener(delegate { CheckAnswer(); }); // Додаємо обробник для введення
+        buttonReload.gameObject.SetActive(false);
+        answerInput.gameObject.SetActive(false);
+
+        answerInput.onSubmit.RemoveAllListeners();
+        answerInput.onSubmit.AddListener(delegate { CheckAnswer(); });
+
+        if (startSound != null)
+        {
+            startSound.Play(); // Воспроизводим звук в начале головоломки
+        }
+
         StartCoroutine(DisplayTextSequence());
     }
 
@@ -29,13 +42,12 @@ public class IntroText4_2 : MonoBehaviour
         yield return ShowText("Користувач = \"Гість\"");
         yield return ShowText("Якщо (Користувач == \"Адмін\"):");
         yield return ShowText("Доступ = \"повний\"");
-        yield return ShowText("інакше:");
+        yield return ShowText("Інакше:");
         yield return ShowText("Доступ = \"обмежений\"");
         yield return ShowText("Гість = 0");
         yield return ShowText("Адмін = 1");
         yield return ShowText("**Питання: Що потрібно ввести, щоби отримати повний доступ?**");
 
-        // Показуємо поле для введення після завершення текстової послідовності
         answerInput.gameObject.SetActive(true);
     }
 
@@ -52,14 +64,31 @@ public class IntroText4_2 : MonoBehaviour
 
     public void CheckAnswer()
     {
+        if (hasAnsweredCorrectly) return; // Запрещаем повторное срабатывание
+
         int playerAnswer;
         bool isNumber = int.TryParse(answerInput.text, out playerAnswer);
 
         if (isNumber && playerAnswer == correctAnswer)
         {
-            textDisplay.text = "**3 карта пам'яті знайдено!";
+            hasAnsweredCorrectly = true;
+            textDisplay.text = "**3 карта пам'яті знайдено!**";
             buttonReload.gameObject.SetActive(false);
-            StartCoroutine(LoadNextScene());
+
+            answerInput.interactable = false;
+            answerInput.gameObject.SetActive(false);
+            answerInput.onSubmit.RemoveAllListeners();
+
+            if (correctAnswerSound != null && !hasPlayedCorrectSound)
+            {
+                hasPlayedCorrectSound = true;
+                correctAnswerSound.Play();
+                StartCoroutine(LoadNextScene(correctAnswerSound.clip.length)); // Ждём окончания звука перед сценой
+            }
+            else
+            {
+                StartCoroutine(LoadNextScene(0f));
+            }
         }
         else
         {
@@ -70,15 +99,22 @@ public class IntroText4_2 : MonoBehaviour
 
     public void RetryPuzzle()
     {
-        answerInput.text = ""; // Очистити поле
-        answerInput.gameObject.SetActive(false); // Сховати поле для введення
-        buttonReload.gameObject.SetActive(false); // Сховати кнопку
-        StartCoroutine(DisplayTextSequence()); // Повторно запустити текстову послідовність
+        answerInput.text = "";
+        answerInput.gameObject.SetActive(false);
+        buttonReload.gameObject.SetActive(false);
+        hasPlayedCorrectSound = false;
+        hasAnsweredCorrectly = false;
+
+        answerInput.interactable = true;
+        answerInput.onSubmit.RemoveAllListeners();
+        answerInput.onSubmit.AddListener(delegate { CheckAnswer(); });
+
+        StartCoroutine(DisplayTextSequence());
     }
 
-    IEnumerator LoadNextScene()
+    IEnumerator LoadNextScene(float delay)
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(nextSceneName);
     }
 }
