@@ -11,6 +11,7 @@ public class DialogueManager3 : MonoBehaviour
     public Image Frame;
     public TextMeshProUGUI NamePers;
     public TextMeshProUGUI Text;
+    public AudioSource backgroundMusic; // Фонова музика
 
     private int dialogueIndex = 0;
 
@@ -30,7 +31,7 @@ public class DialogueManager3 : MonoBehaviour
         new DialogueLine { Speaker = "Lexa", Content = "(Показує на голограмі)\nКожен фрагмент містить координати наступного. Але їх треба активувати в правильній послідовності. " +
             "Спробуй підключитись через мій інтерфейс." },
 
-         new DialogueLine { Speaker = "Narrator", Content = "(Алекс підключає гаджет до голографічного проектора. З’являється головоломка.)" }
+        new DialogueLine { Speaker = "Narrator", Content = "(Алекс підключає гаджет до голографічного проектора. З’являється головоломка.)" }
     };
 
     void Start()
@@ -38,6 +39,13 @@ public class DialogueManager3 : MonoBehaviour
         Lexa.gameObject.SetActive(false);
         Frame.gameObject.SetActive(true);
         Text.alignment = TextAlignmentOptions.Justified;
+
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.loop = true; // Зациклюємо музику
+            backgroundMusic.Play();
+        }
+
         ShowDialogue();
     }
 
@@ -68,13 +76,19 @@ public class DialogueManager3 : MonoBehaviour
         }
         else
         {
-            StartCoroutine(LoadNextScene()); // Переходить на наступну сцену
+            StartCoroutine(LoadNextScene()); // Переходити на наступну сцену
         }
     }
 
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f);
+
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.Stop(); // Вимикаємо музику перед переходом на іншу сцену
+        }
+
         SceneManager.LoadScene("Loading3.1"); // Завантаження наступної сцени
     }
 

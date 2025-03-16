@@ -154,7 +154,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -3.2669, y: -1.4151}
-  m_SizeDelta: {x: 263.3434, y: 126.7289}
+  m_SizeDelta: {x: 270, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &13267418
 MonoBehaviour:
@@ -465,7 +465,8 @@ GameObject:
   - component: {fileID: 99197615}
   - component: {fileID: 99197614}
   m_Layer: 5
-  m_Name: "Loading4.2 \u0413\u043E\u043B\u043E\u0432\u043E\u043B\u043E\u043C\u043A\u0430"
+  m_Name: "Loading4.2 \u0413\u043E\u043B\u043E\u0432\u043E\u043B\u043E\u043C\u043A\u0430
+    3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -709,7 +710,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -659.9, y: -400}
-  m_SizeDelta: {x: 239, y: 85}
+  m_SizeDelta: {x: 270, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &520206853
 GameObject:

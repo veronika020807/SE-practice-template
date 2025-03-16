@@ -11,6 +11,7 @@ public class DialogueManager3_2 : MonoBehaviour
     public Image Frame;
     public TextMeshProUGUI NamePers;
     public TextMeshProUGUI Text;
+    public AudioSource backgroundMusic; // Фонова музика
 
     private int dialogueIndex = 0;
 
@@ -25,7 +26,6 @@ public class DialogueManager3_2 : MonoBehaviour
         new DialogueLine { Speaker = "Alex", Content = "(Шепоче)\nЯк твій батько зв’язався з цим проектом?" },
 
         new DialogueLine { Speaker = "Lexa", Content = "Він вірив, що технології мають об’єднувати, а не контролювати. Але NeuraTech викрали його розробки..." },
-
     };
 
     void Start()
@@ -33,6 +33,13 @@ public class DialogueManager3_2 : MonoBehaviour
         Lexa.gameObject.SetActive(false);
         Frame.gameObject.SetActive(true);
         Text.alignment = TextAlignmentOptions.Justified;
+
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.loop = true; // Зациклюємо музику
+            backgroundMusic.Play();
+        }
+
         ShowDialogue();
     }
 
@@ -70,6 +77,12 @@ public class DialogueManager3_2 : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f);
+
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.Stop(); // Вимикаємо музику перед переходом на іншу сцену
+        }
+
         SceneManager.LoadScene("Loading3.4"); // Завантаження наступної сцени
     }
 

@@ -11,6 +11,7 @@ public class DialogueManager4_1 : MonoBehaviour
     public Image Frame;
     public TextMeshProUGUI NamePers;
     public TextMeshProUGUI Text;
+    public AudioSource backgroundMusic; // Фонова музика
 
     private int dialogueIndex = 0;
 
@@ -36,6 +37,14 @@ public class DialogueManager4_1 : MonoBehaviour
         Lexa.gameObject.SetActive(true);
         Frame.gameObject.SetActive(true);
         Text.alignment = TextAlignmentOptions.Justified;
+
+        // Запуск фонової музики
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.loop = true; // Зациклюємо музику
+            backgroundMusic.Play();
+        }
+
         ShowDialogue();
     }
 
@@ -81,6 +90,13 @@ public class DialogueManager4_1 : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f);
+
+        // Зупинка фонової музики перед переходом
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.Stop();
+        }
+
         SceneManager.LoadScene("Loading4.2"); // Завантаження наступної сцени
     }
 

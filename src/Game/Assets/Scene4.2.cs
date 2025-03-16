@@ -12,6 +12,7 @@ public class DialogueManager4_2 : MonoBehaviour
     public Image Frame;
     public TextMeshProUGUI NamePers;
     public TextMeshProUGUI Text;
+    public AudioSource backgroundMusic; // Фонова музика
 
     private int dialogueIndex = 0;
 
@@ -29,11 +30,11 @@ public class DialogueManager4_2 : MonoBehaviour
 
         new DialogueLine { Speaker = "Cyber ​​Raven", Content = "Останній фрагмент у Центральному ядрі. Але це самогубство..."},
 
-        new DialogueLine { Speaker = "Narrator", Content = "(Лекса перериває зв’язок, вимкнучи гаджет.)"},
+        new DialogueLine { Speaker = "Narrator", Content = "(Лекса перериває зв’язок, вимкнувши гаджет.)"},
 
         new DialogueLine { Speaker = "Lexa", Content = "Це може бути пастка. NeuraTech маніпулює тобою."},
 
-        new DialogueLine { Speaker = "Alex", Content = "(Рішуче)\nЯ йду. Зі мною чи без?"},
+        new DialogueLine { Speaker = "Alex", Content = "(Рішуче)\nЯ йду. Зі мною чи без?"}
     };
 
     void Start()
@@ -41,6 +42,14 @@ public class DialogueManager4_2 : MonoBehaviour
         Lexa.gameObject.SetActive(true);
         Frame.gameObject.SetActive(true);
         Text.alignment = TextAlignmentOptions.Justified;
+
+        // Запуск фонової музики
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.loop = true; // Зациклюємо музику
+            backgroundMusic.Play();
+        }
+
         ShowDialogue();
     }
 
@@ -97,6 +106,13 @@ public class DialogueManager4_2 : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f);
+
+        // Зупинка фонової музики перед переходом
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.Stop();
+        }
+
         SceneManager.LoadScene("Loading4.4"); // Завантаження наступної сцени
     }
 

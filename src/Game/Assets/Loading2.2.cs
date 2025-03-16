@@ -16,19 +16,19 @@ public class IntroText2_2 : MonoBehaviour
     public AudioSource correctAnswerSound; // Звук при правильній відповіді
 
     private int correctAnswer = 3; // Правильна відповідь
-    private bool hasPlayedCorrectSound = false; // Флаг для відстеження відтворення звуку
-    private bool hasAnsweredCorrectly = false; // Флаг, щоб не дозволяти повторну відповідь
+    private bool hasPlayedCorrectSound = false; // Флаг для звуку
+    private bool hasAnsweredCorrectly = false; // Флаг для правильної відповіді
 
     void Start()
     {
-        buttonReload.gameObject.SetActive(false); // Ховаємо кнопку повтору
-        answerInput.gameObject.SetActive(false); // Ховаємо поле для введення
-        answerInput.onSubmit.AddListener(delegate { CheckAnswer(); }); // Додаємо обробник для введення
+        buttonReload.gameObject.SetActive(false);
+        answerInput.gameObject.SetActive(false);
+        answerInput.onSubmit.AddListener(delegate { CheckAnswer(); });
 
-        if (startSound != null)
-        {
-            startSound.Play(); // Відтворюємо звук на початку головоломки
-        }
+        // Встановлюємо зелений колір тексту
+        textDisplay.color = new Color(0f, 1f, 0f);
+
+        if (startSound != null) startSound.Play();
 
         StartCoroutine(DisplayTextSequence());
     }
@@ -52,58 +52,57 @@ public class IntroText2_2 : MonoBehaviour
 
     IEnumerator ShowText(string message)
     {
-        textDisplay.text = "";
+        textDisplay.text = "C:\\> "; // Додаємо запрошення командного рядка
         foreach (char letter in message)
         {
             textDisplay.text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
+        textDisplay.text += " _"; // Імітація мигаючого курсора
         yield return new WaitForSeconds(1.5f);
     }
 
     public void CheckAnswer()
     {
-        if (hasAnsweredCorrectly) return; // Запрещаем повторный вызов
+        if (hasAnsweredCorrectly) return;
 
         int playerAnswer;
         bool isNumber = int.TryParse(answerInput.text, out playerAnswer);
 
         if (isNumber && playerAnswer == correctAnswer)
         {
-            hasAnsweredCorrectly = true; // Устанавливаем флаг, что ответ верный
-            textDisplay.text = "**1 карта пам'яті знайдено!**";
+            hasAnsweredCorrectly = true;
+            textDisplay.text = "C:\\> **1 карта пам'яті знайдено!** _";
             buttonReload.gameObject.SetActive(false);
-
-            // Отключаем поле ввода и удаляем обработчик ввода
             answerInput.interactable = false;
-            answerInput.onSubmit.RemoveAllListeners(); // Удаляем обработчик, чтобы больше не срабатывал
+            answerInput.onSubmit.RemoveAllListeners();
 
             if (correctAnswerSound != null && !hasPlayedCorrectSound)
             {
-                hasPlayedCorrectSound = true; // Фиксируем, что звук уже проигран
+                hasPlayedCorrectSound = true;
                 correctAnswerSound.Play();
-                StartCoroutine(LoadNextScene(correctAnswerSound.clip.length)); // Ждём окончания звука перед сценой
+                StartCoroutine(LoadNextScene(correctAnswerSound.clip.length));
             }
             else
             {
-                StartCoroutine(LoadNextScene(0f)); // Если звука нет, сразу переходим
+                StartCoroutine(LoadNextScene(0f));
             }
         }
         else
         {
-            textDisplay.text = "**Неправильна відповідь. Спробуйте ще раз!**";
+            textDisplay.text = "C:\\> **Неправильна відповідь. Спробуйте ще раз!** _";
             buttonReload.gameObject.SetActive(true);
         }
     }
 
     public void RetryPuzzle()
     {
-        answerInput.text = ""; // Очистити поле
-        answerInput.gameObject.SetActive(false); // Сховати поле для введення
-        buttonReload.gameObject.SetActive(false); // Сховати кнопку
-        hasPlayedCorrectSound = false; // Скидаємо флаг для повторного відтворення звуку
-        hasAnsweredCorrectly = false; // Скидаємо флаг для дозволу нової відповіді
-        StartCoroutine(DisplayTextSequence()); // Повторно запустити текстову послідовність
+        answerInput.text = "";
+        answerInput.gameObject.SetActive(false);
+        buttonReload.gameObject.SetActive(false);
+        hasPlayedCorrectSound = false;
+        hasAnsweredCorrectly = false;
+        StartCoroutine(DisplayTextSequence());
     }
 
     IEnumerator LoadNextScene(float delay)

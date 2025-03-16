@@ -11,7 +11,7 @@ public class DialogueManager2_2 : MonoBehaviour
     public Image Father;
     public TextMeshProUGUI NamePers;
     public TextMeshProUGUI Text;
-
+    public AudioSource backgroundMusic; // Фонова музика
 
     private int dialogueIndex = 0;
 
@@ -38,11 +38,17 @@ public class DialogueManager2_2 : MonoBehaviour
 
     void Start()
     {
-        // Скрываем всех персонажей в начале сцены
         Alex.gameObject.SetActive(false);
         Frame.gameObject.SetActive(true);
-        Father.gameObject.SetActive(false); // Hide Father's photo initially
-        Text.alignment = TextAlignmentOptions.Justified; // Выровнять текст по ширине
+        Father.gameObject.SetActive(false); // Ховаємо фото батька
+
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.loop = true; // Зациклюємо музику
+            backgroundMusic.Play();
+        }
+
+        Text.alignment = TextAlignmentOptions.Justified;
         ShowDialogue();
     }
 
@@ -53,55 +59,48 @@ public class DialogueManager2_2 : MonoBehaviour
             NamePers.text = dialogue[dialogueIndex].Speaker;
             Text.text = dialogue[dialogueIndex].Content;
 
-            if (dialogue[dialogueIndex].Speaker == "Gadget")
-            {
-                // Во время диалога гаджета ничего не показываем
-                Alex.gameObject.SetActive(false);
-                Frame.gameObject.SetActive(true);
-                Father.gameObject.SetActive(false); // Hide Father's photo during Gadget's dialogue
-            }
-            else if (dialogue[dialogueIndex].Speaker == "Narrator")
+            if (dialogue[dialogueIndex].Speaker == "Gadget" || dialogue[dialogueIndex].Speaker == "Narrator")
             {
                 Alex.gameObject.SetActive(false);
+                Father.gameObject.SetActive(false);
                 Frame.gameObject.SetActive(true);
-                Father.gameObject.SetActive(false); // Hide Father's photo during Narrator's dialogue
             }
             else if (dialogue[dialogueIndex].Speaker == "Father's voice")
             {
-                // Show Father's photo when he speaks
                 Alex.gameObject.SetActive(false);
                 Frame.gameObject.SetActive(true);
-                Father.gameObject.SetActive(true); // Show Father's photo
+                Father.gameObject.SetActive(true);
             }
-            else
+            else if (dialogue[dialogueIndex].Speaker == "Alex")
             {
-                // Появляется диалоговое окно и персонажи
+                Alex.gameObject.SetActive(true);
+                Father.gameObject.SetActive(false);
                 Frame.gameObject.SetActive(true);
-
-                if (dialogue[dialogueIndex].Speaker == "Alex")
-                {
-                    Alex.gameObject.SetActive(true);
-                    Father.gameObject.SetActive(false); // Hide Father's photo during Alex's dialogue
-                }
             }
 
             dialogueIndex++;
         }
         else
         {
-            StartCoroutine(LoadNextScene()); // Переход к следующей сцене
+            StartCoroutine(LoadNextScene());
         }
     }
 
     IEnumerator LoadNextScene()
     {
-        yield return new WaitForSeconds(1f); // Задержка перед сменой сцены
+        yield return new WaitForSeconds(1f);
+
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.Stop(); // Вимикаємо музику перед переходом на іншу сцену
+        }
+
         SceneManager.LoadScene("Chapter 2/Loading3");
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) // Переход по диалогу
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             ShowDialogue();
         }

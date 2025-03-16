@@ -16,21 +16,19 @@ public class IntroText3_1 : MonoBehaviour
     public AudioSource correctAnswerSound; // Звук при правильній відповіді
 
     private int correctAnswer = 21; // Правильна відповідь
-    private bool hasPlayedCorrectSound = false; // Флаг для контроля звука правильного ответа
-    private bool hasAnsweredCorrectly = false; // Флаг, чтобы не допускать повторной проверки
+    private bool hasPlayedCorrectSound = false; // Флаг для звуку
+    private bool hasAnsweredCorrectly = false; // Флаг для правильної відповіді
 
     void Start()
     {
         buttonReload.gameObject.SetActive(false);
         answerInput.gameObject.SetActive(false);
-
-        answerInput.onSubmit.RemoveAllListeners();
         answerInput.onSubmit.AddListener(delegate { CheckAnswer(); });
 
-        if (startSound != null)
-        {
-            startSound.Play(); // Воспроизводим звук в начале головоломки
-        }
+        // Встановлюємо зелений колір тексту
+        textDisplay.color = new Color(0f, 1f, 0f);
+
+        if (startSound != null) startSound.Play();
 
         StartCoroutine(DisplayTextSequence());
     }
@@ -49,18 +47,19 @@ public class IntroText3_1 : MonoBehaviour
 
     IEnumerator ShowText(string message)
     {
-        textDisplay.text = "";
+        textDisplay.text = "C:\\> "; // Додаємо запрошення командного рядка
         foreach (char letter in message)
         {
             textDisplay.text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
+        textDisplay.text += " _"; // Імітація мигаючого курсора
         yield return new WaitForSeconds(1.5f);
     }
 
     public void CheckAnswer()
     {
-        if (hasAnsweredCorrectly) return; // Запрещаем повторное срабатывание
+        if (hasAnsweredCorrectly) return;
 
         int playerAnswer;
         bool isNumber = int.TryParse(answerInput.text, out playerAnswer);
@@ -68,7 +67,7 @@ public class IntroText3_1 : MonoBehaviour
         if (isNumber && playerAnswer == correctAnswer)
         {
             hasAnsweredCorrectly = true;
-            textDisplay.text = "**2 карта пам'яті знайдено!**";
+            textDisplay.text = "C:\\> **2 карта пам'яті знайдено!** _";
             buttonReload.gameObject.SetActive(false);
 
             answerInput.interactable = false;
@@ -79,7 +78,7 @@ public class IntroText3_1 : MonoBehaviour
             {
                 hasPlayedCorrectSound = true;
                 correctAnswerSound.Play();
-                StartCoroutine(LoadNextScene(correctAnswerSound.clip.length)); // Ждём окончания звука перед сценой
+                StartCoroutine(LoadNextScene(correctAnswerSound.clip.length));
             }
             else
             {
@@ -88,7 +87,7 @@ public class IntroText3_1 : MonoBehaviour
         }
         else
         {
-            textDisplay.text = "**Неправильна відповідь. Спробуйте ще раз!**";
+            textDisplay.text = "C:\\> **Неправильна відповідь. Спробуйте ще раз!** _";
             buttonReload.gameObject.SetActive(true);
         }
     }

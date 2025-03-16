@@ -12,6 +12,7 @@ public class DialogueManager3_4 : MonoBehaviour
     public Image Frame;
     public TextMeshProUGUI NamePers;
     public TextMeshProUGUI Text;
+    public AudioSource backgroundMusic; // Фонова музика
 
     private int dialogueIndex = 0;
 
@@ -42,6 +43,13 @@ public class DialogueManager3_4 : MonoBehaviour
         Father.gameObject.SetActive(false); // Hide Father's photo initially
         Frame.gameObject.SetActive(true);
         Text.alignment = TextAlignmentOptions.Justified;
+
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.loop = true; // Зациклюємо музику
+            backgroundMusic.Play();
+        }
+
         ShowDialogue();
     }
 
@@ -89,6 +97,12 @@ public class DialogueManager3_4 : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f);
+
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.Stop(); // Вимикаємо музику перед переходом на іншу сцену
+        }
+
         SceneManager.LoadScene("Loading4.1"); // Завантаження наступної сцени
     }
 

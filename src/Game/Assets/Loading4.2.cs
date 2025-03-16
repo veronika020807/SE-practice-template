@@ -9,28 +9,26 @@ public class IntroText4_2 : MonoBehaviour
     public TextMeshProUGUI textDisplay; // Виведення тексту
     public TMP_InputField answerInput; // Поле для введення
     public Button buttonReload; // Кнопка повторення
-    public float textSpeed = 0.1f; // Швидкість друкування тексту
+    public float textSpeed = 0.05f; // Швидкість друкування тексту
     public string nextSceneName = "Loading 4.3"; // Назва наступної сцени
 
     public AudioSource startSound; // Звук на початку головоломки
     public AudioSource correctAnswerSound; // Звук при правильній відповіді
 
     private int correctAnswer = 1; // Правильна відповідь
-    private bool hasPlayedCorrectSound = false; // Флаг, щоб звук грав тільки один раз
-    private bool hasAnsweredCorrectly = false; // Флаг, щоб запобігти повторному введенню
+    private bool hasPlayedCorrectSound = false; // Флаг для звуку
+    private bool hasAnsweredCorrectly = false; // Флаг для правильної відповіді
 
     void Start()
     {
         buttonReload.gameObject.SetActive(false);
         answerInput.gameObject.SetActive(false);
-
-        answerInput.onSubmit.RemoveAllListeners();
         answerInput.onSubmit.AddListener(delegate { CheckAnswer(); });
 
-        if (startSound != null)
-        {
-            startSound.Play(); // Воспроизводим звук в начале головоломки
-        }
+        // Встановлюємо зелений колір тексту
+        textDisplay.color = new Color(0f, 1f, 0f);
+
+        if (startSound != null) startSound.Play();
 
         StartCoroutine(DisplayTextSequence());
     }
@@ -41,9 +39,9 @@ public class IntroText4_2 : MonoBehaviour
         yield return ShowText("**Завдання:**");
         yield return ShowText("Користувач = \"Гість\"");
         yield return ShowText("Якщо (Користувач == \"Адмін\"):");
-        yield return ShowText("Доступ = \"повний\"");
+        yield return ShowText("  Доступ = \"повний\"");
         yield return ShowText("Інакше:");
-        yield return ShowText("Доступ = \"обмежений\"");
+        yield return ShowText("  Доступ = \"обмежений\"");
         yield return ShowText("Гість = 0");
         yield return ShowText("Адмін = 1");
         yield return ShowText("**Питання: Що потрібно ввести, щоби отримати повний доступ?**");
@@ -53,18 +51,19 @@ public class IntroText4_2 : MonoBehaviour
 
     IEnumerator ShowText(string message)
     {
-        textDisplay.text = "";
+        textDisplay.text = "C:\\> "; // Додаємо запрошення командного рядка
         foreach (char letter in message)
         {
             textDisplay.text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
+        textDisplay.text += " _"; // Імітація мигаючого курсора
         yield return new WaitForSeconds(1.5f);
     }
 
     public void CheckAnswer()
     {
-        if (hasAnsweredCorrectly) return; // Запрещаем повторное срабатывание
+        if (hasAnsweredCorrectly) return;
 
         int playerAnswer;
         bool isNumber = int.TryParse(answerInput.text, out playerAnswer);
@@ -72,7 +71,7 @@ public class IntroText4_2 : MonoBehaviour
         if (isNumber && playerAnswer == correctAnswer)
         {
             hasAnsweredCorrectly = true;
-            textDisplay.text = "**3 карта пам'яті знайдено!**";
+            textDisplay.text = "C:\\> **3 карта пам'яті знайдено!** _";
             buttonReload.gameObject.SetActive(false);
 
             answerInput.interactable = false;
@@ -83,7 +82,7 @@ public class IntroText4_2 : MonoBehaviour
             {
                 hasPlayedCorrectSound = true;
                 correctAnswerSound.Play();
-                StartCoroutine(LoadNextScene(correctAnswerSound.clip.length)); // Ждём окончания звука перед сценой
+                StartCoroutine(LoadNextScene(correctAnswerSound.clip.length));
             }
             else
             {
@@ -92,7 +91,7 @@ public class IntroText4_2 : MonoBehaviour
         }
         else
         {
-            textDisplay.text = "**Неправильна відповідь. Спробуйте ще раз!**";
+            textDisplay.text = "C:\\> **Неправильна відповідь. Спробуйте ще раз!** _";
             buttonReload.gameObject.SetActive(true);
         }
     }

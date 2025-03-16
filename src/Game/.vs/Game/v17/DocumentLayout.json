@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|c:\\users\\diass\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\se-practice-template\\src\\game\\assets\\loading4.2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\loading4.2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|c:\\users\\diass\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\se-practice-template\\src\\game\\assets\\final1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\final1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|c:\\users\\diass\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\se-practice-template\\src\\game\\assets\\loading3.1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\loading3.1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|c:\\users\\diass\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\se-practice-template\\src\\game\\assets\\final2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\final2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|c:\\users\\diass\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\se-practice-template\\src\\game\\assets\\loading2.2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\loading2.2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|c:\\users\\diass\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\se-practice-template\\src\\game\\assets\\scene5.1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\scene5.1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|c:\\users\\diass\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\se-practice-template\\src\\game\\assets\\loading5.3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\loading5.3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|c:\\users\\diass\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\se-practice-template\\src\\game\\assets\\the ending.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}|Assembly-CSharp.csproj|solutionrelative:assets\\the ending.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +38,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Loading4.2.cs",
-              "DocumentMoniker": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Loading4.2.cs",
-              "RelativeDocumentMoniker": "Assets\\Loading4.2.cs",
-              "ToolTip": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Loading4.2.cs",
-              "RelativeToolTip": "Assets\\Loading4.2.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCwAAAApAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Final2.cs",
+              "DocumentMoniker": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Final2.cs",
+              "RelativeDocumentMoniker": "Assets\\Final2.cs",
+              "ToolTip": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Final2.cs",
+              "RelativeToolTip": "Assets\\Final2.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwEcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T23:22:01.846Z",
+              "WhenOpened": "2025-03-16T14:14:19.986Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Loading3.1.cs",
-              "DocumentMoniker": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Loading3.1.cs",
-              "RelativeDocumentMoniker": "Assets\\Loading3.1.cs",
-              "ToolTip": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Loading3.1.cs",
-              "RelativeToolTip": "Assets\\Loading3.1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Final1.cs",
+              "DocumentMoniker": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Final1.cs",
+              "RelativeDocumentMoniker": "Assets\\Final1.cs",
+              "ToolTip": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Final1.cs",
+              "RelativeToolTip": "Assets\\Final1.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwFsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T23:16:27.853Z",
+              "WhenOpened": "2025-03-16T14:14:19.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Loading2.2.cs",
-              "DocumentMoniker": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Loading2.2.cs",
-              "RelativeDocumentMoniker": "Assets\\Loading2.2.cs",
-              "ToolTip": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Loading2.2.cs",
-              "RelativeToolTip": "Assets\\Loading2.2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
+              "Title": "Scene5.1.cs",
+              "DocumentMoniker": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Scene5.1.cs",
+              "RelativeDocumentMoniker": "Assets\\Scene5.1.cs",
+              "ToolTip": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Scene5.1.cs",
+              "RelativeToolTip": "Assets\\Scene5.1.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T22:50:47.659Z",
+              "WhenOpened": "2025-03-16T14:14:10.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Loading5.3.cs",
+              "DocumentMoniker": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Loading5.3.cs",
+              "RelativeDocumentMoniker": "Assets\\Loading5.3.cs",
+              "ToolTip": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\Loading5.3.cs",
+              "RelativeToolTip": "Assets\\Loading5.3.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T13:47:16.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "The ending.cs",
+              "DocumentMoniker": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\The ending.cs",
+              "RelativeDocumentMoniker": "Assets\\The ending.cs",
+              "ToolTip": "C:\\Users\\Diass\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\SE-practice-template\\src\\Game\\Assets\\The ending.cs",
+              "RelativeToolTip": "Assets\\The ending.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T13:46:09.799Z",
               "EditorCaption": ""
             }
           ]

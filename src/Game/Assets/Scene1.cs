@@ -11,6 +11,7 @@ public class DialogueManager1 : MonoBehaviour
     public Image Frame;
     public TextMeshProUGUI NamePers;
     public TextMeshProUGUI Text;
+    public AudioSource backgroundMusic; // Додано змінну для фонової музики
 
     private int dialogueIndex = 0;
 
@@ -50,6 +51,13 @@ public class DialogueManager1 : MonoBehaviour
         Glitch.gameObject.SetActive(false); // Спершу з'являється тільки Алекс
         Frame.gameObject.SetActive(true);
         Text.alignment = TextAlignmentOptions.Justified; // Вирівнювання тексту по ширині
+
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.loop = true; // Зациклюємо музику
+            backgroundMusic.Play();
+        }
+
         ShowDialogue();
     }
 
@@ -89,6 +97,12 @@ public class DialogueManager1 : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f); // Невелика затримка перед переходом
+
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.Stop(); // Вимикаємо музику перед зміною сцени
+        }
+
         SceneManager.LoadScene("Loading2.1"); // Завантаження наступної сцени
     }
 

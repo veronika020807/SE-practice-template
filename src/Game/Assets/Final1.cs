@@ -10,6 +10,7 @@ public class Final1 : MonoBehaviour
     public Image Father;
     public TextMeshProUGUI NamePers;
     public TextMeshProUGUI Text;
+    public AudioSource backgroundMusic; // Фонова музика
 
     private int dialogueIndex = 0;
 
@@ -31,6 +32,14 @@ public class Final1 : MonoBehaviour
         Father.gameObject.SetActive(false);
         Frame.gameObject.SetActive(true);
         Text.alignment = TextAlignmentOptions.Justified; // Вирівнювання тексту по ширині
+
+        // Запуск фонової музики
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.loop = true; // Зациклюємо музику
+            backgroundMusic.Play();
+        }
+
         ShowDialogue();
     }
 
@@ -64,7 +73,14 @@ public class Final1 : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f); // Невелика затримка перед переходом
-        SceneManager.LoadScene("The ending"); // Завантаження наступної сцени
+
+        // Зупинка фонової музики перед переходом
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.Stop();
+        }
+
+        SceneManager.LoadScene("Loading5.3"); // Завантаження наступної сцени
     }
 
     void Update()

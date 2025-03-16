@@ -10,6 +10,7 @@ public class DialogueManager2_1 : MonoBehaviour
     public Image Frame;
     public TextMeshProUGUI NamePers;
     public TextMeshProUGUI Text;
+    public AudioSource backgroundMusic; // Фонова музика
 
     private int dialogueIndex = 0;
 
@@ -25,13 +26,19 @@ public class DialogueManager2_1 : MonoBehaviour
             "Він залазить у вентиляційний шахту, як його навчив батько." },
 
         new DialogueLine { Speaker = "Alex", Content = "(Шепоче)\nАрхів має бути на третьому рівні..."},
-
     };
 
     void Start()
     {
         Frame.gameObject.SetActive(true);
         Text.alignment = TextAlignmentOptions.Justified; // Вирівнювання тексту по ширині
+
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.loop = true; // Зациклення музики
+            backgroundMusic.Play();
+        }
+
         ShowDialogue();
     }
 
@@ -46,12 +53,6 @@ public class DialogueManager2_1 : MonoBehaviour
             {
                 Alex.gameObject.SetActive(true);
             }
-
-            else if (dialogue[dialogueIndex].Speaker == "Narrator")
-            {
-                Alex.gameObject.SetActive(false);
-            }
-
             else
             {
                 Alex.gameObject.SetActive(false);
@@ -68,6 +69,12 @@ public class DialogueManager2_1 : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1f); // Невелика затримка перед переходом
+
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.Stop(); // Вимикаємо музику перед зміною сцени
+        }
+
         SceneManager.LoadScene("Loading2.2"); // Завантаження наступної сцени
     }
 
