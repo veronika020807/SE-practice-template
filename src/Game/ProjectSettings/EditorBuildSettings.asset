@@ -98,6 +98,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Chapter 4/The ending.unity
     guid: 2589b1c822ff47b438827753c659d5ee
+  - enabled: 1
+    path: Assets/Chapter 4/Loading5.3.unity
+    guid: 5cd14bf680a97f9428f9633ea1f5bbd5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
